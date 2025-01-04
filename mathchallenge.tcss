@@ -1,0 +1,103 @@
+Header {
+  dock: top;
+  height: 3;
+  content-align: center middle;
+  background: black;
+  color: white;
+}
+
+
+.menu MenuGroup {
+    height: 75%;
+    align: center middle;
+    margin: 3;
+    display: block;
+    border: solid green;
+    layout: grid;
+    grid-size: 2;
+}
+
+.menu #start {
+margin: 3;
+    display: block;
+    border: solid green;
+}
+
+#start {
+    display: none;
+}
+
+MenuGroup {
+    display: none;
+}
+
+TimeGroup {
+    background: $boost;
+    margin: 0;
+    min-width: 50;
+    padding: 1;
+}
+
+.menu TimeGroup {
+    display: none;
+}
+
+ProblemGroup {
+    background: $boost;
+    margin: 1;
+    min-width: 50;
+    padding: 1;
+}
+
+.menu ProblemGroup {
+    display: none;
+}
+
+NumberGroup {
+
+}
+
+.menu NumberGroup {
+    display: none;
+}
+
+#timer {
+    text-align: center;
+}
+
+#pass {
+    dock: left;
+    width: 15;
+    align: center middle;
+}
+
+#problem {
+    text-align: center;
+}
+
+#answer {
+    width: 15;
+    dock: right;
+}
+
+Placeholder {
+    width: 0;
+}
+
+#numpad {
+    layout: grid;
+    grid-size: 3 4;
+    background: $boost;
+    margin: 0;
+    padding: 1 4;
+    height: 70%;
+    width: 50%;
+}
+
+#number-0 {
+    column-span: 1;
+}
+
+Button {
+    border: solid green;
+}
