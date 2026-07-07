@@ -1,14 +1,13 @@
 # Python Games Playground
 
-This repository is a playground for developing simple Python games with my son.
+This repository is a playground for developing simple Python games with my son. It is intended to be a learning and experimentation space.
 
-The initial focus is on learning game logic and GUI interaction using small projects like Tic Tac Torus.
 
 ## Included
 
-- `top_tic_tac_toe/tic_tac_torus.py` — a Tic Tac Toe game adapted for toroidal topology expansions.
+- `TicTacTorus/tic_tac_torus.py` — a Tic Tac Toe game adapted for different topologies. Basically an implementation of the game found here: 
+https://chalkdustmagazine.com/features/topological-tic-tac-toe/
 
 ## Notes
 
-- The project is intended to be a learning and experimentation space.
 - Additional simple games may be added over time.
