@@ -13,6 +13,7 @@ class TicTacTorus(Board):
         self.cell_color = "white"
         self.turn = 1
         self.on_mouse_click = self.mouse_fn
+        self._canvas.bind("<Button-3>", self._on_right_click)
         self.set_neighbors(topology)
         self._margin = 10
         self.draw_boundary_arrows()
@@ -170,9 +171,19 @@ class TicTacTorus(Board):
         return self[row][col]
 
 
+    def _on_right_click(self, event):
+        """Handle right-click events by reporting the clicked board cell."""
+        rc = self._xy2rc(event.x, event.y)
+        if rc is not None:
+            row, col = rc
+            self[row][col] = None  # Reset the cell to None on right-click
+
     def mouse_fn(self, btn, row, col):    # mouse callback function    
         """Handles mouse click events on the game board. Updates the board state based on the current player's 
         turn and checks for a winner."""
+        if self[row][col] is not None:
+            return
+        
         if self.turn %2:
             self[row][col] = 1
         else:
