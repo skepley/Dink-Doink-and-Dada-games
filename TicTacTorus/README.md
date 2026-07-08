@@ -7,12 +7,11 @@ In short, the board is allowed to have different mathematical topologies such as
 
 ## How to Play
 1. Download the game and install game2dboard library
-2. Run the game using Python:
-   - `python tic_tac_torus.py topology` where topology is one of {standard, cylinder, torus, "mobius strip", "projective plane", "klein bottle"}.
-2. The game starts with an empty board.
-3. Players take turns placing their symbol (`X` or `O`) on the board with left click starting with `X`.
-4. The goal is to get three of your symbols in a row, column, or diagonal.
-5. Because the board wraps around the edges, some lines can connect across the borders.
+2. Run the game using Python: `python tic_tac_torus.py topology` where topology is one of {standard, cylinder, torus, "mobius strip", "projective plane", "klein bottle"}.
+1. The game starts with an empty board.
+2. Players take turns placing their symbol (`X` or `O`) on the board with left click starting with `X`.
+3. The goal is to get three of your symbols in a row, column, or diagonal.
+4. Because the board wraps around the edges, some lines can connect across the borders.
 
 ## Notes
 
