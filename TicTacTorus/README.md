@@ -17,5 +17,5 @@ In short, the board is allowed to have different mathematical topologies such as
 ## Notes
 
 - The game is meant to be played by two players.
-- Try to think strategically, since wraparound moves can change the outcome quickly.
+- Try to think strategically, since wraparound moves can make threats which are harder for your opponent to notice or even make double threats which guarantee a win on next move. 
 - Some topologies have a guaranteed win for the starting player. Try to figure out which topologies have a win and what the winning strategy is. 
