@@ -1,3 +1,4 @@
+import argparse
 from game2dboard import Board
 from tkinter import messagebox
 
@@ -44,7 +45,10 @@ class TicTacTorus(Board):
                     self.diagonal2[cell] = left_neighbors[u1]  # up-left diagonal neighbor
 
 
-        if topology == "cylinder":
+        if topology == "standard":
+            set_diagonal_neighbors()
+        
+        elif topology == "cylinder":
             self.right = [1, 2, 0, 4, 5, 3, 7, 8, 6] # right neighbor of each cell
             set_diagonal_neighbors()
 
@@ -128,7 +132,10 @@ class TicTacTorus(Board):
 
     def draw_boundary_arrows(self, arrows=None):
         """Draw a set of example arrows around the board boundary."""
-        if self.topology == "cylinder":
+        if self.topology == "standard":
+            return # No arrows for standard topology
+            
+        elif self.topology == "cylinder":
             arrows = [
                 ("left", "blue", "+"),
                 ("right", "blue", "+"),
@@ -279,6 +286,20 @@ class TicTacTorus(Board):
             return self.idx(winning_line[0])
         return None
 
-ng = TicTacTorus(topology="projective plane")  
+def main():
+    parser = argparse.ArgumentParser(description="Play TicTacTorus from the command line.")
+    parser.add_argument(
+        "topology",
+        nargs="?",
+        default="standard",
+        choices=["standard", "cylinder", "mobius strip", "torus", "klein bottle", "projective plane"],
+        help="Board topology to use",
+    )
+    args = parser.parse_args()
+    TicTacTorus(topology=args.topology)
+
+
+if __name__ == "__main__":
+    main()
 
 
