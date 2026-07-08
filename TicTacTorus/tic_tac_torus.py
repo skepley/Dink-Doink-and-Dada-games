@@ -67,8 +67,8 @@ class TicTacTorus(Board):
             set_diagonal_neighbors()
 
         elif topology == "projective plane":
-            self.right = [1, 2, 0, 4, 5, 3, 7, 8, 6]
-            self.up = [6, 7, 8, 0, 1, 2, 3, 4, 5]
+            self.right = [1, 2, 6, 4, 5, 3, 7, 8, 0]
+            self.up = [8, 7, 6, 0, 1, 2, 3, 4, 5]
             set_diagonal_neighbors()
 
         else:
