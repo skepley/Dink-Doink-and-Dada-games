@@ -7,7 +7,7 @@ This repository is a playground for developing simple Python games with my son. 
 
 - `TicTacTorus` — a Tic Tac Toe game adapted for different topologies. Basically an implementation of the game found here: 
 https://chalkdustmagazine.com/features/topological-tic-tac-toe/
-- `Rain Worms EV` - A single turn expected value calculator for the game Rain Worms/Pickomino.
+- `Rain Worms EV` — A single turn expected value calculator for the game Rain Worms/Pickomino.
 
 ## Notes
 
